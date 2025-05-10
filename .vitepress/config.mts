@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -7,38 +7,42 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/docs/v1/installation' }
+      { text: "Home", link: "/" },
+      { text: "Docs", link: "/docs/v1/installation" },
     ],
 
     sidebar: [
       {
         items: [
           {
-            text: 'Getting Started', items: [
-              { text: 'Installation', link: '/docs/v1/installation' },
-              { text: 'Configuration', link: '/docs/v1/configuration' }
+            text: "Getting Started",
+            items: [
+              { text: "Installation", link: "/docs/v1/installation" },
+              { text: "Configuration", link: "/docs/v1/configuration" },
             ],
-            collapsed: true
+            collapsed: true,
           },
           {
-            text: 'The Basics', items: [
-              { text: 'Routing', link: '/docs/v1/routing' },
-            ],
-            collapsed: true
+            text: "The Basics",
+            items: [{ text: "Routing", link: "/docs/v1/routing" }],
+            collapsed: true,
           },
           {
-            text: 'ORM', items: [
-              { text: 'Getting Started' }
-            ],
-            collapsed: true
-          }
-        ]
-      }
+            text: "Database",
+            items: [{ text: "Migrations", link: "/docs/v1/migrations" }],
+            collapsed: true,
+          },
+          {
+            text: "ORM",
+            items: [{ text: "Getting Started" }],
+            collapsed: true,
+          },
+        ],
+      },
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/shiftrightonce/dirtybase' }
-    ]
-  }
-})
+      { icon: "github", link: "https://github.com/shiftrightonce/dirtybase" },
+    ],
+  },
+});
