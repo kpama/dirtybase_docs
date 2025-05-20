@@ -29,7 +29,10 @@ export default defineConfig({
           },
           {
             text: "Database",
-            items: [{ text: "Migrations", link: "/docs/v1/migrations" }],
+            items: [
+              { text: "Migrations", link: "/docs/v1/migrations" },
+              { text: "Seeding", link: "/docs/v1/seeding" },
+            ],
             collapsed: true,
           },
           {
