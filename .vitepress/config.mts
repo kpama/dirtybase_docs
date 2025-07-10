@@ -37,7 +37,7 @@ export default defineConfig({
           },
           {
             text: "ORM",
-            items: [{ text: "Getting Started" }],
+            items: [{ text: "Getting Started", link: "/docs/v1/orm/index.md" }],
             collapsed: true,
           },
         ],
