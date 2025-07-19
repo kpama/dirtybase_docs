@@ -42,6 +42,7 @@ export default defineConfig({
               { text: "Model", link: "/docs/v1/orm/model.md" },
               { text: "Repository", link: "/docs/v1/orm/Repository.md" },
               { text: "Relation", link: "/docs/v1/orm/relationship.md" },
+              { text: "Deeper", link: "/docs/v1/orm/deeper.md" },
             ],
             collapsed: true,
           },
