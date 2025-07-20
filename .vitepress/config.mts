@@ -19,6 +19,7 @@ export default defineConfig({
             items: [
               { text: "Installation", link: "/docs/v1/installation" },
               { text: "Configuration", link: "/docs/v1/configuration" },
+              { text: "env variables", link: "/docs/v1/config/env_config" },
             ],
             collapsed: true,
           },
@@ -38,10 +39,10 @@ export default defineConfig({
           {
             text: "ORM",
             items: [
-              { text: "Getting Started", link: "/docs/v1/orm/index.md" },
-              { text: "Model", link: "/docs/v1/orm/model.md" },
-              { text: "Repository", link: "/docs/v1/orm/Repository.md" },
-              { text: "Relation", link: "/docs/v1/orm/relationship.md" },
+              { text: "Getting Started", link: "/docs/v1/orm/index" },
+              { text: "Model", link: "/docs/v1/orm/model" },
+              { text: "Repository", link: "/docs/v1/orm/Repository" },
+              { text: "Relation", link: "/docs/v1/orm/relationship" },
               { text: "Deeper", link: "/docs/v1/orm/deeper.md" },
             ],
             collapsed: true,
