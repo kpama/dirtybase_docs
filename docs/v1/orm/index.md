@@ -27,5 +27,3 @@ struct Post {
    content: String
 }
 ```
-
-
