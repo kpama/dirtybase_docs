@@ -12,6 +12,9 @@
 DTY_APP_ENV="dev" 
 DTY_APP_NAME="Dirty Base App"
 
+#       App 
+#------------------------------------------------
+
 #------------------------------------------------
 #       Web 
 #------------------------------------------------
@@ -51,12 +54,12 @@ DTY_APP_WEB_ENABLE_DEV_ROUTES=true
 #------------------------------------------------
 #       Web middleware 
 #------------------------------------------------
-DTY_APP_WEB_MIDDLEWARE.ADMIN_ROUTE="auth"                # comma separated list of middleware names in the order they should be registered
+DTY_APP_WEB_MIDDLEWARE.ADMIN_ROUTE="auth"                    # comma separated list of middleware names in the order they should be registered
 DTY_APP_WEB_MIDDLEWARE.API_ROUTE="auth:jwt"                  # comma separated list of middleware names in the order they should be registered
-DTY_APP_WEB_MIDDLEWARE.DEV_ROUTE=""                  # comma separated list of middleware names in the order they should be registered
-DTY_APP_WEB_MIDDLEWARE.GENERAL_ROUTE=""              # comma separated list of middleware names in the order they should be registered
-DTY_APP_WEB_MIDDLEWARE.GLOBAL="bind"                     # comma separated list of middleware names in the order they should be registered
-DTY_APP_WEB_MIDDLEWARE.INSECURE_API_ROUTE=""         # comma separated list of middleware names in the order they should be registered
+DTY_APP_WEB_MIDDLEWARE.DEV_ROUTE=""                          # comma separated list of middleware names in the order they should be registered
+DTY_APP_WEB_MIDDLEWARE.GENERAL_ROUTE=""                      # comma separated list of middleware names in the order they should be registered
+DTY_APP_WEB_MIDDLEWARE.GLOBAL="bind"                         # comma separated list of middleware names in the order they should be registered
+DTY_APP_WEB_MIDDLEWARE.INSECURE_API_ROUTE=""                 # comma separated list of middleware names in the order they should be registered
 
 #------------------------------------------------
 #       Web CORS
@@ -109,6 +112,7 @@ DTY_APP_WEB_DEV_ROUTE_PREFIX="/_dev"
 #      Web proxy and forwarded headers
 #------------------------------------------------
 DTY_APP_WEB_TRUSTED_PROXIES="" # comma, separated list of IPs or IPNET
+
 # One or more headers to source the client's IP address from
 # The order is important. Searching will stop on the first valid result
 DTY_APP_WEB_PROXY_TRUSTED_HEADERS="" # comma, separated list
@@ -116,13 +120,16 @@ DTY_APP_WEB_PROXY_TRUSTED_HEADERS="" # comma, separated list
 #      Web proxy and forwarded headers
 #------------------------------------------------
 
-# Security
+
+#------------------------------------------------
+#     Security 
+#------------------------------------------------
 DTY_APP_KEY=
 DTY_APP_PREVIOUS_KEYS=""  # comma separate old keys
 
-
-#       App 
+#     Security 
 #------------------------------------------------
+
 
 
 
