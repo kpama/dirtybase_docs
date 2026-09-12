@@ -4,60 +4,59 @@ outline: deep
 
 # Seeding
 
-Create new seeder by using the `dirtybase_cli`. To create a new seeder run the following command.
+Seeders populate a database with application data. They are registered by an application extension and receive both a database manager and a Dirtybase context.
 
-```bash
-dirtybase_cli make seeder users
+## Generate a seeder
+
+Create a seeder with the Dirtybase CLI:
+
+```sh
+cargo run -p cli -- --package my_app make seeder "Create users"
 ```
 
-If this is the first time running the seeder command a few things will be created. A `seeder.rs` file in `src/dirtybase_entry` and a `users_seeder.rs` file in the newly created `src/dirtybase_entry/seeder` directory.
+The first seeder creates `src/dirtybase_entry/seeder.rs` and the seeder module under `src/dirtybase_entry/seeder/`.
 
-## Dirtybase Entry File
+## Register a seeder
 
-You will need make a change to your entry file in order to run your seeder. If
-you do not already have a `on_cli_command()` function in your entry file, add
-the following to your `dirtybase_entry.rs`.
+Register seeders from the extension's `on_cli_command` hook:
 
 ```rust
 mod seeder;
-use seeder::register_seeders;
+
+use dirtybase_contract::cli_contract::prelude::ArgMatches;
+use dirtybase_contract::prelude::Context;
 
 #[derive(Default)]
 pub struct Extension;
 
 #[dirtybase_contract::async_trait]
 impl dirtybase_contract::ExtensionSetup for Extension {
-    ....
-
-    // Put this after your setup function
-
     async fn on_cli_command(
         &self,
         cmd: &str,
         matches: ArgMatches,
         _context: Context,
     ) -> ArgMatches {
-        // If you already have the on_cli_command function you only need to add the if statement.
         if cmd == "seed" {
-            register_seeders().await;
-        };
+            seeder::register_seeders().await;
+        }
 
         matches
     }
-
-  // End new code
-
-  ....
+}
 ```
 
-## Seeder File
+The generated `register_seeders` function wires the seeder module into Dirtybase's seeder registerer.
 
-TBD
+## Seeder callbacks
 
-## Seeder Directory Files
+Seeders are registered by name with a callback that receives a database manager and context:
 
-TBD
-
+```rust
+SeederRegisterer::register("users", |manager, context| async move {
+    // Insert the required data using manager and context.
+})
+.await;
 ```
 
-```
+The CLI can run a named seeder, run all seeders, or list registered seeders depending on the command options available in the current CLI build. Use `cargo run -p cli -- --help` to inspect them.
