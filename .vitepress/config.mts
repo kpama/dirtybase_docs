@@ -5,6 +5,10 @@ export default defineConfig({
   title: "Dirtybase",
   description: "Documentation for the Dirtybase Rust web framework",
   themeConfig: {
+    siteTitle: 'Dirtybase <span class="version-tag">version 0.1</span>',
+    search: {
+      provider: "local",
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
@@ -13,9 +17,6 @@ export default defineConfig({
     ],
 
     sidebar: [
-      {
-        text: "Dirtybase 0.1",
-        items: [
           {
             text: "Getting Started",
             items: [
@@ -81,8 +82,6 @@ export default defineConfig({
             text: "Contributing",
             items: [{ text: "Contribution Guide", link: "/docs/v1/contributing" }],
           },
-        ],
-      },
     ],
 
     socialLinks: [

@@ -1,0 +1,12 @@
+.VPNavBarTitle .version-tag {
+  display: inline-block;
+  margin-left: 0.55rem;
+  padding: 0.18rem 0.45rem;
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 999px;
+  color: var(--vp-c-brand-1);
+  font-size: 0.65em;
+  font-weight: 600;
+  line-height: 1;
+  vertical-align: middle;
+}
