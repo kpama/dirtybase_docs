@@ -15,6 +15,12 @@ When working from the Dirtybase repository, invoke the standalone binary through
 cargo run -p cli -- <command>
 ```
 
+After installing it with `cargo install --path bin/cli`, invoke the same CLI globally as `dirtybase_cli`:
+
+```sh
+dirtybase_cli <command>
+```
+
 Inspect the currently compiled command set at any time:
 
 ```sh

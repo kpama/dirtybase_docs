@@ -4,7 +4,7 @@ outline: deep
 
 # Installation
 
-Dirtybase is currently installed from its Git repository as a Cargo workspace.
+Dirtybase's CLI tooling is currently distributed as part of the Dirtybase Git repository. Download the repository if you want to use the CLI to create an application or generate migrations and seeders. The CLI is not yet distributed as a separate installed binary.
 
 ## Install Rust
 
@@ -17,26 +17,40 @@ cargo --version
 
 Dirtybase uses the Rust 2024 edition, so use a current stable Rust toolchain.
 
-## Clone Dirtybase
+## Download the CLI tooling
 
-Clone the framework and move into its directory:
+Clone Dirtybase and move into its directory:
 
 ```sh
 git clone https://github.com/kpama/dirtybase.git
 cd dirtybase
 ```
 
-Build the workspace to download dependencies and verify the local toolchain:
+Build the workspace to download the CLI and framework dependencies and verify the local toolchain:
 
 ```sh
 cargo build
 ```
 
-## Create an application
-
-Use the bundled CLI to generate a new application package:
+Building does not add the CLI to your shell's `PATH`. Install the CLI globally from the cloned repository with Cargo:
 
 ```sh
+cargo install --path bin/cli
+```
+
+The executable is named `dirtybase_cli` and is installed into Cargo's binary directory, usually `~/.cargo/bin`. To confirm that the cli is installed properly, use the command below. You may need to restart your `$SHELL`.
+
+```sh
+dirtybase_cli --help
+```
+
+## Create an application with the CLI
+
+Use the globally installed CLI, or invoke the same binary through Cargo from the cloned repository, to generate a new application package:
+
+```sh
+dirtybase_cli new my_app
+# Equivalent repository-local invocation:
 cargo run -p cli -- new my_app
 ```
 
