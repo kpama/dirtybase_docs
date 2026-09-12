@@ -4,22 +4,21 @@ layout: home
 
 hero:
   name: "Dirtybase"
-  text: "Dirtybase framework and documentation site"
-  tagline: My great project tagline
+  text: "The battery-included Rust framework"
+  tagline: Build web applications with routing, database tools, authentication, and application services included.
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Get started
+      link: /docs/v1/installation
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Explore the ORM
+      link: /docs/v1/orm/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Simple setup
+    details: Start with focused configuration and a clear path from installation to your first application.
+  - title: Database tooling
+    details: Organize migrations and seed data as part of the development workflow.
+  - title: Lightweight ORM
+    details: Work with models, repositories, and relationships without hiding the underlying database.
 ---
-
